@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/server.dir/server1.c.o  -o server  -L/home/lqx/unpv13e/build -rdynamic -lunp -Wl,-rpath,/home/lqx/unpv13e/build 
