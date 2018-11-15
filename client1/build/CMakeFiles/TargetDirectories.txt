@@ -1,0 +1,1 @@
+/home/lqx/unixtcp/client1/build/CMakeFiles/client.dir
