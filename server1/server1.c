@@ -20,20 +20,19 @@ int main(int argc , char ** argv){
 
 	for ( ; ; ) {
 		connfd = Accept(listenfd, (SA *) NULL, NULL); //由listenfd产生一个新的connfd，在这个connfd上进行了操作
-
         ticks = time(NULL);
         snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks)); //字符放入buff中
         Write(connfd, buff, strlen(buff)); //这里strlen自己加1，只会导致服务端多传了一个字符。
-        int bufflen = strlen(buff);
-        printf("bufflen is %d\n",bufflen);
-        char tmp[5];
-        tmp[0] = 'a';
-        tmp[1] = 'b';
-        tmp[2] = '\r';
-        tmp[3] = '\n';
-        tmp[4] = '\0';
-        int tmplen = strlen(tmp);
-        printf("tmplen is %d\n",tmplen);
+        // int bufflen = strlen(buff);
+        // printf("bufflen is %d\n",bufflen);
+        // char tmp[5];
+        // tmp[0] = 'a';
+        // tmp[1] = 'b';
+        // tmp[2] = '\r';
+        // tmp[3] = '\n';
+        // tmp[4] = '\0';
+        // int tmplen = strlen(tmp);
+        // printf("tmplen is %d\n",tmplen);
 		Close(connfd); //关闭connfd
 	}
 }
